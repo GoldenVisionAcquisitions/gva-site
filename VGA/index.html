@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Golden Vision Acquisitions L.L.C. -- Car wash land sourcing. We find, qualify, and connect prime commercial land to car wash developers. Serving Georgia and nationwide."/>
+  <title>Golden Vision Acquisitions L.L.C. | We Find the Land. You Build the Car Wash.</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--navy:#1B3A6B;--teal:#2E75B6;--gold:#BF9000;--gold-lt:#f0c040;--dark:#0f2347;--slate:#1a4060;--white:#fff;--lgray:#F5F7FA;--mgray:#E8ECF0;--text:#222;--muted:#666}
+    body{font-family:'Segoe UI',Arial,sans-serif;color:var(--text);line-height:1.6;overflow-x:hidden}
+
+    /* ---- KEYFRAMES ---- */
+    @keyframes gradientShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-20px) scale(1.05)}}
+    @keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+    @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    @keyframes pulseGlow{0%,100%{box-shadow:0 0 0 0 rgba(191,144,0,.45)}70%{box-shadow:0 0 0 9px rgba(191,144,0,0)}}
+    @keyframes navReveal{from{opacity:0;transform:translateY(-100%)}to{opacity:1;transform:translateY(0)}}
+    @keyframes badgePulse{0%,100%{box-shadow:0 0 0 0 rgba(191,144,0,.3)}60%{box-shadow:0 0 0 8px rgba(191,144,0,0)}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    /* ---- NAV ---- */
+    nav{background:rgba(27,58,107,.97);padding:0 4%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.5);backdrop-filter:blur(12px);transition:background .3s,box-shadow .3s;animation:navReveal .5s ease both}
+    nav.scrolled{background:rgba(15,35,71,.97);box-shadow:0 4px 30px rgba(0,0,0,.6)}
+    .nav-logo{display:flex;align-items:center;gap:12px;padding:10px 0;text-decoration:none}
+    .logo-text .logo-main{display:block;font-size:1rem;font-weight:800;color:#fff;letter-spacing:.3px;line-height:1.2}
+    .logo-text .logo-sub{display:block;font-size:.62rem;color:var(--gold-lt);letter-spacing:1.5px;text-transform:uppercase}
+    .nav-links{display:flex;gap:20px;list-style:none;align-items:center}
+    .nav-links a{color:#CBD5E0;text-decoration:none;font-size:.84rem;font-weight:500;transition:color .2s;white-space:nowrap;position:relative}
+    .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:2px;background:var(--gold);transition:width .2s}
+    .nav-links a:hover{color:#fff}.nav-links a:hover::after{width:100%}
+    .nav-cta{background:linear-gradient(135deg,#d4a017,#BF9000)!important;color:#fff!important;padding:8px 20px;border-radius:4px;font-weight:700!important;box-shadow:0 4px 15px rgba(191,144,0,.4);animation:pulseGlow 2.5s ease infinite}
+    .nav-cta:hover{background:linear-gradient(135deg,#e0b828,#c89800)!important;box-shadow:0 6px 20px rgba(191,144,0,.6);transform:translateY(-1px)}
+    .nav-cta::after{display:none!important}
+    @media(max-width:680px){.nav-links{display:none}}
+
+    /* ---- HERO ---- */
+    .hero{background:linear-gradient(-45deg,#08112a,#1B3A6B,#0f2347,#0d2a5a,#1a4060);background-size:400% 400%;animation:gradientShift 10s ease infinite;color:#fff;padding:96px 5% 80px;text-align:center;position:relative;overflow:hidden;min-height:480px;display:flex;align-items:center;justify-content:center}
+    .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:34px 34px;pointer-events:none}
+    .hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(46,117,182,.18) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+    .particle{position:absolute;border-radius:50%;background:var(--gold);pointer-events:none;animation:float ease-in-out infinite}
+    .p1{width:8px;height:8px;left:12%;top:22%;opacity:.35;animation-duration:7s;animation-delay:0s}
+    .p2{width:5px;height:5px;left:78%;top:18%;opacity:.25;animation-duration:5.5s;animation-delay:1.2s}
+    .p3{width:10px;height:10px;left:87%;top:68%;opacity:.2;animation-duration:9s;animation-delay:.4s}
+    .p4{width:4px;height:4px;left:28%;top:78%;opacity:.3;animation-duration:6.5s;animation-delay:2s}
+    .p5{width:7px;height:7px;left:55%;top:12%;opacity:.28;animation-duration:8s;animation-delay:.9s}
+    .p6{width:6px;height:6px;left:4%;top:62%;opacity:.2;animation-duration:7.5s;animation-delay:3s}
+    .p7{width:12px;height:12px;left:92%;top:38%;opacity:.15;animation-duration:10s;animation-delay:1.8s}
+    .p8{width:5px;height:5px;left:42%;top:88%;opacity:.25;animation-duration:6s;animation-delay:.6s}
+    .hero-inner{position:relative;z-index:1;max-width:800px;width:100%}
+    .hero-badge{display:inline-block;background:rgba(191,144,0,.14);color:var(--gold-lt);border:1px solid rgba(191,144,0,.35);font-size:.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:7px 24px;border-radius:30px;margin-bottom:24px;animation:fadeInUp .7s ease .1s both,badgePulse 3s ease 1s infinite}
+    .hero h1{font-size:clamp(2.4rem,6vw,3.8rem);font-weight:900;line-height:1.08;margin-bottom:20px;animation:fadeInUp .7s ease .3s both;letter-spacing:-1px}
+    .gold-word{background:linear-gradient(135deg,var(--gold-lt) 0%,var(--gold) 40%,var(--gold-lt) 60%,#c89000 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 3.5s linear infinite}
+    .hero-sub{font-size:1.06rem;color:#A8C0D8;max-width:580px;margin:0 auto 38px;line-height:1.7;animation:fadeInUp .7s ease .5s both}
+    .hero-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;animation:fadeInUp .7s ease .7s both}
+    .btn-hero{display:inline-block;padding:13px 28px;border-radius:5px;font-size:.86rem;font-weight:700;text-decoration:none;transition:all .25s;border:2px solid transparent;text-transform:uppercase;letter-spacing:.6px}
+    .btn-hp{background:linear-gradient(135deg,#d4a017,#BF9000);color:#fff;box-shadow:0 5px 18px rgba(191,144,0,.4);border:none}
+    .btn-hp:hover{background:linear-gradient(135deg,#e0b828,#c89800);box-shadow:0 9px 28px rgba(191,144,0,.55);transform:translateY(-3px)}
+    .btn-ho{background:#fff;color:#1B3A6B;border-color:#fff}
+    .btn-ho:hover{background:#fdeea3;border-color:#fdeea3;color:#1B3A6B;transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.18)}
+    .hero-tagline{margin-top:34px;font-size:.72rem;letter-spacing:2.5px;color:rgba(255,255,255,.28);text-transform:uppercase;animation:fadeInUp .7s ease .9s both}
+
+    /* ---- TRUST TICKER ---- */
+    .trust-ticker-wrap{background:var(--dark);overflow:hidden;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.06);padding:0}
+    .trust-ticker{display:flex;width:max-content;animation:ticker 28s linear infinite}
+    .trust-ticker:hover{animation-play-state:paused}
+    .ticker-item{display:flex;align-items:center;gap:12px;padding:18px 44px;border-right:1px solid rgba(255,255,255,.06);flex-shrink:0;cursor:default}
+    .ticker-item .t-num{font-size:1.5rem;font-weight:900;color:var(--gold-lt);line-height:1}
+    .ticker-item .t-label{font-size:.68rem;color:#8FA8C0;letter-spacing:1.2px;text-transform:uppercase;line-height:1.3}
+    .ticker-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);opacity:.35;flex-shrink:0}
+
+    /* ---- WHO WE SERVE (tabbed) ---- */
+    .serve-section{background:linear-gradient(170deg,#0a1628 0%,#0f2347 55%,#091520 100%);padding:80px 5% 72px}
+    .serve-header{text-align:center;max-width:680px;margin:0 auto 50px}
+    .serve-h2{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:800;color:#fff;margin-bottom:14px;line-height:1.2}
+    .serve-intro{font-size:.95rem;color:rgba(255,255,255,.6);line-height:1.72}
+
+    /* Tab bar */
+    .s-tab-bar{display:flex;max-width:920px;margin:0 auto;background:rgba(10,18,38,.7);border:1px solid rgba(255,255,255,.09);border-bottom:none;border-radius:12px 12px 0 0;overflow:hidden}
+    @media(max-width:620px){.s-tab-bar{flex-wrap:wrap}}
+    .s-tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px 10px 16px;background:transparent;border:none;border-bottom:3px solid transparent;cursor:pointer;color:rgba(255,255,255,.38);font-family:'Segoe UI',Arial,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.7px;text-transform:uppercase;transition:all .22s;line-height:1.35;text-align:center}
+    @media(max-width:620px){.s-tab{flex:1 1 50%;padding:16px 8px 13px;font-size:.68rem}}
+    .s-tab:hover{color:rgba(255,255,255,.75);background:rgba(255,255,255,.03)}
+    .s-tab.active{color:#fff;background:rgba(191,144,0,.07);border-bottom-color:var(--gold)}
+    .s-tab-icon{width:38px;height:38px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.32);transition:color .22s}
+    .s-tab.active .s-tab-icon{color:var(--gold-lt)}
+    .s-tab-icon svg{width:38px;height:38px}
+    .s-tab-lbl{line-height:1.3}
+
+    /* Panels */
+    .s-panels-wrap{max-width:920px;margin:0 auto;background:rgba(8,14,28,.5);border:1px solid rgba(255,255,255,.09);border-top:none;border-radius:0 0 12px 12px;overflow:hidden}
+    .s-panel{display:none;grid-template-columns:1fr 1.4fr}
+    .s-panel.active{display:grid}
+    @media(max-width:740px){.s-panel.active{grid-template-columns:1fr}}
+    .s-panel-left{padding:46px 42px;background:rgba(255,255,255,.018);border-right:1px solid rgba(255,255,255,.07);display:flex;flex-direction:column;gap:18px}
+    .s-panel-right{padding:46px 42px;display:flex;flex-direction:column}
+    @media(max-width:740px){.s-panel-left{border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}}
+    @media(max-width:500px){.s-panel-left,.s-panel-right{padding:30px 22px}}
+
+    .s-icon-xl{width:66px;height:66px;border-radius:15px;background:linear-gradient(135deg,rgba(191,144,0,.14),rgba(191,144,0,.04));border:1px solid rgba(191,144,0,.22);display:flex;align-items:center;justify-content:center;color:var(--gold-lt);flex-shrink:0}
+    .s-icon-xl svg{width:42px;height:42px}
+    .s-panel-h{font-size:clamp(1.1rem,2.1vw,1.38rem);font-weight:800;color:#fff;line-height:1.28;margin:0}
+    .s-panel-desc{font-size:.9rem;color:rgba(255,255,255,.68);line-height:1.74;margin:0}
+    .s-callout{background:rgba(191,144,0,.09);border-left:3px solid rgba(191,144,0,.6);padding:14px 16px;border-radius:0 5px 5px 0;font-size:.82rem;color:rgba(255,255,255,.7);line-height:1.62;font-style:italic;margin-top:auto}
+
+    .section-label{font-size:.66rem;letter-spacing:2.8px;text-transform:uppercase;color:var(--gold-lt);margin-bottom:10px;font-weight:700;display:flex;align-items:center;gap:8px}
+    .section-label::before{content:'';display:block;width:20px;height:2px;background:var(--gold)}
+    .steps{list-style:none;margin-bottom:24px;margin-top:4px;display:flex;flex-direction:column;gap:16px}
+    .steps li{display:flex;gap:14px;align-items:flex-start}
+    .step-num{width:30px;height:30px;background:linear-gradient(135deg,var(--gold-lt),var(--gold));color:#1a1a00;border-radius:50%;font-size:.78rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;box-shadow:0 3px 10px rgba(191,144,0,.35)}
+    .steps li div{font-size:.91rem;color:rgba(255,255,255,.82);line-height:1.62}
+    .steps li strong{color:#fff;font-weight:700}
+    .note-text{font-size:.77rem;color:rgba(255,255,255,.38);margin-bottom:24px;line-height:1.62;font-style:italic;border-left:2px solid rgba(255,255,255,.12);padding-left:10px}
+    .btn-panel{display:inline-block;background:linear-gradient(135deg,#d4a017,#BF9000);color:#fff;padding:13px 28px;border-radius:5px;font-size:.88rem;font-weight:700;text-decoration:none;transition:all .25s;margin-top:auto;text-transform:uppercase;letter-spacing:.5px;box-shadow:0 5px 18px rgba(191,144,0,.35);border:none;cursor:pointer;align-self:flex-start}
+    .btn-panel:hover{background:linear-gradient(135deg,#e0b828,#c89800);box-shadow:0 9px 28px rgba(191,144,0,.5);transform:translateY(-2px)}
+
+    /* ---- SCROLL REVEAL ---- */
+    .reveal{opacity:0;transform:translateY(36px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}.reveal-d4{transition-delay:.4s}
+
+    /* ---- ABOUT ---- */
+    #about{padding:88px 5%;background:var(--lgray)}
+    .about-grid{max-width:860px;margin:0 auto}
+    .about-text .section-label{color:var(--teal)}
+    .about-text .section-label::before{background:var(--teal)}
+    .about-text h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:var(--navy);margin-bottom:18px;line-height:1.28}
+    .about-text p{color:var(--muted);margin-bottom:14px;line-height:1.78;font-size:.96rem}
+    .about-values{display:flex;flex-direction:column;gap:14px}
+    .value-card{background:#fff;border-left:4px solid var(--gold);padding:18px 22px;border-radius:0 8px 8px 0;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:all .25s ease}
+    .value-card:hover{transform:translateX(4px);box-shadow:0 6px 20px rgba(0,0,0,.1);border-left-width:6px}
+    .v-title{font-size:.92rem;font-weight:800;color:var(--navy);margin-bottom:4px}
+    .v-body{font-size:.84rem;color:var(--muted);line-height:1.56}
+
+    /* ---- VALUES ---- */
+    #values{background:#fff;padding:0}
+    .values-header{background:linear-gradient(135deg,var(--navy) 0%,var(--dark) 100%);text-align:center;padding:72px 5% 68px;position:relative;overflow:hidden}
+    .values-header::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
+    .values-header h2{font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:900;color:#fff;margin-bottom:14px;position:relative}
+    .values-header .tagline{font-size:1rem;color:var(--gold-lt);letter-spacing:1px;font-style:italic;position:relative}
+    .values-grid-2x2{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--mgray)}
+    @media(max-width:680px){.values-grid-2x2{grid-template-columns:1fr}}
+    .value-block{background:#fff;padding:52px 44px;transition:all .3s ease;border-top:3px solid transparent;position:relative;overflow:hidden}
+    .value-block::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(191,144,0,.04),transparent);opacity:0;transition:opacity .3s;pointer-events:none}
+    .value-block:hover{border-top-color:var(--gold);box-shadow:0 14px 44px rgba(0,0,0,.09);transform:translateY(-5px);z-index:1}
+    .value-block:hover::after{opacity:1}
+    .v-icon-wrap{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,rgba(27,58,107,.07),rgba(27,58,107,.03));border:1px solid rgba(27,58,107,.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px;transition:all .3s}
+    .v-icon-wrap svg{width:28px;height:28px;stroke:var(--navy);fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s}
+    .value-block:hover .v-icon-wrap{background:linear-gradient(135deg,rgba(191,144,0,.13),rgba(191,144,0,.04));border-color:rgba(191,144,0,.28)}
+    .value-block:hover .v-icon-wrap svg{stroke:var(--gold)}
+    .we-are{display:block;font-size:.63rem;letter-spacing:3px;text-transform:uppercase;color:var(--teal);margin-bottom:7px;font-weight:700}
+    .value-block h3{font-size:1.45rem;font-weight:900;color:var(--navy);margin-bottom:14px;line-height:1.18}
+    .value-block p{color:var(--muted);font-size:.95rem;line-height:1.78;margin-bottom:16px}
+    .v-proof{font-size:.82rem;color:var(--teal);font-weight:600;display:flex;align-items:center;gap:6px}
+    .v-proof::before{content:'';display:inline-block;width:16px;height:2px;background:var(--teal);flex-shrink:0}
+    .values-promise{background:var(--lgray);text-align:center;padding:44px 5%;border-top:1px solid var(--mgray)}
+    .values-promise p{font-size:.97rem;color:var(--muted);max-width:680px;margin:0 auto;line-height:1.78}
+    @media(max-width:480px){.value-block{padding:36px 24px}}
+
+    /* ---- CONTACT ---- */
+    #contact{padding:88px 5%;background:var(--lgray)}
+    .contact-top{max-width:900px;margin:0 auto 52px;text-align:center}
+    .contact-top .section-label{justify-content:center;color:var(--teal);display:flex}
+    .contact-top .section-label::before{background:var(--teal)}
+    .contact-top h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:var(--navy);margin:10px 0}
+    .contact-top p{color:var(--muted);font-size:.97rem}
+    .contact-info-bar{max-width:900px;margin:0 auto 34px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
+    .ci-item{display:flex;align-items:center;gap:12px;background:#fff;padding:14px 20px;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,.07);transition:all .25s}
+    .ci-item:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.1)}
+    .ci-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--navy),var(--slate));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;color:#fff;box-shadow:0 3px 10px rgba(27,58,107,.3)}
+    .ci-text{line-height:1.3}
+    .ci-label{font-size:.65rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;font-weight:700}
+    .ci-value{font-size:.92rem;color:var(--navy);font-weight:700}
+    .ci-value a{color:var(--navy);text-decoration:none}
+    .ci-value a:hover{color:var(--teal)}
+    .social-row{display:flex;justify-content:center;gap:12px;margin-bottom:44px;flex-wrap:wrap}
+    .soc-link{display:flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--mgray);padding:10px 20px;border-radius:6px;text-decoration:none;font-size:.84rem;font-weight:700;color:var(--navy);transition:all .25s;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .soc-link:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-2px);box-shadow:0 6px 18px rgba(46,117,182,.15)}
+    .book-card{max-width:900px;margin:0 auto 52px;background:linear-gradient(135deg,var(--navy) 0%,var(--dark) 100%);border-radius:12px;padding:30px 38px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;box-shadow:0 8px 30px rgba(15,35,71,.35);position:relative;overflow:hidden}
+    .book-card::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.025) 1px,transparent 1px);background-size:24px 24px;pointer-events:none}
+    .book-card-text h3{color:#fff;font-size:1.1rem;font-weight:800;margin-bottom:6px;position:relative}
+    .book-card-text p{color:rgba(255,255,255,.68);font-size:.88rem;position:relative}
+    .btn-book{display:inline-block;background:linear-gradient(135deg,#d4a017,#BF9000);color:#fff;padding:13px 30px;border-radius:6px;font-size:.92rem;font-weight:700;text-decoration:none;white-space:nowrap;transition:all .25s;box-shadow:0 5px 18px rgba(191,144,0,.4);text-transform:uppercase;letter-spacing:.5px;position:relative}
+    .btn-book:hover{background:linear-gradient(135deg,#e0b828,#c89800);box-shadow:0 9px 28px rgba(191,144,0,.55);transform:translateY(-2px)}
+    .form-tabs-wrap{max-width:900px;margin:0 auto}
+    .form-tabs{display:flex;border-bottom:2px solid var(--mgray);background:#fff;border-radius:8px 8px 0 0;overflow:hidden}
+    .form-tab{padding:14px 20px;cursor:pointer;font-size:.87rem;font-weight:700;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-2px;transition:all .2s;user-select:none;flex:1;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px}
+    .form-tab svg{width:18px;height:18px;flex-shrink:0;stroke:currentColor;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s}
+    .form-tab:hover{color:var(--navy);background:var(--lgray)}
+    .form-tab.active{color:var(--navy);border-color:var(--gold);background:#fff}
+    .form-pane{display:none}.form-pane.active{display:block}
+    .form-card{background:#fff;border-radius:0 0 10px 10px;padding:38px;box-shadow:0 4px 24px rgba(0,0,0,.09)}
+    .form-card h3{font-size:1.1rem;font-weight:800;color:var(--navy);margin-bottom:6px}
+    .form-card .fc-sub{font-size:.86rem;color:var(--muted);margin-bottom:26px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:600px){.form-grid{grid-template-columns:1fr}}
+    .form-card label{display:block;font-size:.78rem;font-weight:700;color:var(--navy);margin-bottom:5px;margin-top:14px}
+    .form-card input,.form-card select,.form-card textarea{width:100%;padding:11px 15px;border:1.5px solid var(--mgray);border-radius:6px;font-size:.9rem;font-family:inherit;color:var(--text);transition:all .2s;background:#fff}
+    .form-card input:focus,.form-card select:focus,.form-card textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(191,144,0,.12)}
+    .form-card textarea{resize:vertical;min-height:90px}
+    .form-card .full-span{grid-column:1/-1}
+    .btn-submit{display:block;width:100%;padding:14px;border:none;border-radius:6px;font-size:.95rem;font-weight:700;cursor:pointer;margin-top:22px;transition:all .25s;color:#fff;text-transform:uppercase;letter-spacing:.6px;box-shadow:0 5px 18px rgba(0,0,0,.2)}
+    .btn-submit-seller{background:linear-gradient(135deg,#244f95,var(--navy))}.btn-submit-seller:hover{background:linear-gradient(135deg,#2a5aa5,#1e3f7a);transform:translateY(-2px);box-shadow:0 9px 28px rgba(27,58,107,.4)}
+    .btn-submit-partner{background:linear-gradient(135deg,#3a85c6,var(--teal))}.btn-submit-partner:hover{background:linear-gradient(135deg,#4090d0,#3580c0);transform:translateY(-2px);box-shadow:0 9px 28px rgba(46,117,182,.4)}
+    .btn-submit-investor{background:linear-gradient(135deg,#152840,var(--dark))}.btn-submit-investor:hover{background:linear-gradient(135deg,#1a3050,#0d1e35);transform:translateY(-2px);box-shadow:0 9px 28px rgba(15,35,71,.45)}
+    .success-panel{display:none;background:#fff;border-radius:0 0 10px 10px;padding:52px 38px;text-align:center}
+    .success-panel .sp-icon{font-size:3.2rem;margin-bottom:18px}
+    .success-panel h3{font-size:1.4rem;font-weight:900;color:var(--navy);margin-bottom:10px}
+    .success-panel p{color:var(--muted);margin-bottom:26px;font-size:.95rem}
+    .sp-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+    .sp-btn{display:inline-block;padding:12px 26px;border-radius:6px;text-decoration:none;font-size:.88rem;font-weight:700;transition:all .25s;text-transform:uppercase;letter-spacing:.4px}
+    .sp-btn-p{background:linear-gradient(135deg,#d4a017,var(--gold));color:#fff;box-shadow:0 5px 16px rgba(191,144,0,.35)}.sp-btn-p:hover{background:linear-gradient(135deg,#e0b828,#c89800);transform:translateY(-2px)}
+    .sp-btn-o{border:2px solid var(--navy);color:var(--navy)}.sp-btn-o:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
+    .sp-contact{margin-top:26px;font-size:.82rem;color:var(--muted)}
+    .sp-contact a{color:var(--teal);text-decoration:none;font-weight:600}
+    .sp-social{display:flex;justify-content:center;gap:10px;margin-top:14px}
+    .sp-social a{font-size:.78rem;color:var(--muted);text-decoration:none;border:1px solid var(--mgray);padding:6px 14px;border-radius:4px;transition:all .2s}
+    .sp-social a:hover{color:var(--teal);border-color:var(--teal)}
+
+    /* ---- FOOTER ---- */
+    footer{background:linear-gradient(180deg,#0a1628 0%,#060e1c 100%);color:#8FA8C0;padding:60px 5% 26px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:52px;max-width:1100px;margin:0 auto 44px}
+    @media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:32px}}
+    .footer-brand{display:flex;flex-direction:column;gap:14px}
+    .footer-brand-top{display:flex;align-items:center;gap:12px}
+    .fb-name{font-size:.95rem;font-weight:800;color:#fff}
+    .fb-tag{font-size:.73rem;color:var(--gold-lt);font-style:italic;margin-top:2px}
+    .fb-desc{font-size:.83rem;line-height:1.68}
+    .footer-social{display:flex;gap:10px;flex-wrap:wrap}
+    .footer-social a{width:36px;height:36px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.85rem;text-decoration:none;transition:all .25s;color:#8FA8C0;font-weight:700}
+    .footer-social a:hover{background:linear-gradient(135deg,#d4a017,var(--gold));color:#fff;border-color:var(--gold);transform:translateY(-2px)}
+    .footer-col h4{font-size:.75rem;font-weight:700;color:#fff;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.07)}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .footer-col ul a{color:#8FA8C0;text-decoration:none;font-size:.85rem;transition:color .2s;display:flex;align-items:center;gap:6px}
+    .footer-col ul a::before{content:'';display:block;width:8px;height:1px;background:rgba(255,255,255,.2);flex-shrink:0;transition:width .2s,background .2s}
+    .footer-col ul a:hover{color:var(--gold-lt)}.footer-col ul a:hover::before{width:14px;background:var(--gold)}
+    .contact-item{display:flex;flex-direction:column;gap:2px;margin-bottom:14px}
+    .contact-item span{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold)}
+    .contact-item a{color:#8FA8C0;text-decoration:none;font-size:.85rem}
+    .contact-item a:hover{color:#fff}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:.76rem}
+    .footer-bottom a{color:#8FA8C0;text-decoration:none}.footer-bottom a:hover{color:var(--gold-lt)}
+
+    /* ---- SCROLL OFFSET ---- */
+    .serve-section,#about,#values,#contact{scroll-margin-top:68px}
+    #sellers,#agents,#jv-partners,#investors{scroll-margin-top:0}
+    @media(max-width:480px){.form-card{padding:24px 18px}.book-card{padding:24px 20px}.panel{padding:44px 5%}}
+
+    /* Mobile hamburger nav */
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px 8px;z-index:1002;margin-left:auto}
+    .hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:all .3s}
+    .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+    .hamburger.open span:nth-child(2){opacity:0;transform:translateX(-8px)}
+    .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    .mob-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(15,35,71,.97);z-index:1000;flex-direction:column;align-items:center;justify-content:center;gap:26px}
+    .mob-menu.open{display:flex}
+    .mob-menu a{color:#fff;text-decoration:none;font-size:1.25rem;font-weight:600;letter-spacing:.05em;transition:color .2s}
+    .mob-menu a:hover{color:var(--gold-lt)}
+    .mob-menu a.nav-cta{color:var(--gold-lt);border:1.5px solid var(--gold-lt);padding:10px 28px;border-radius:24px}
+    .mob-close{position:absolute;top:14px;right:16px;background:none;border:none;color:#fff;font-size:2.4rem;line-height:1;cursor:pointer;padding:8px 12px}
+    .mob-close:hover{color:var(--gold-lt)}
+    body.menu-open{overflow:hidden}
+    .back-top{display:none;position:fixed;bottom:24px;left:20px;z-index:998;background:rgba(15,35,71,.92);color:#fff;border:1.5px solid var(--gold-lt);border-radius:24px;padding:10px 16px;font-size:.9rem;font-weight:600;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.35)}
+    .back-top.show{display:block}
+    @media(max-width:680px){.hamburger{display:flex}.nav-links{display:none!important}}
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">
+    <img src="GVA_Logo.png" width="46" height="46" alt="Golden Vision Acquisitions Logo">
+    <div class="logo-text">
+      <span class="logo-main">Golden Vision Acquisitions</span>
+      <span class="logo-sub">L.L.C. &bull; Car Wash Land Sourcing</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#sellers">For Land Sellers</a></li>
+    <li><a href="#agents">For Agents</a></li>
+    <li><a href="#jv-partners">JV Partners</a></li>
+    <li><a href="#investors">Developers</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#values">Our Values</a></li>
+    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE MENU OVERLAY -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" id="mobClose" aria-label="Close menu">&times;</button>
+  <a href="#sellers" class="mob-link">For Land Sellers</a>
+  <a href="#agents" class="mob-link">For Agents</a>
+  <a href="#jv-partners" class="mob-link">JV Partners</a>
+  <a href="#investors" class="mob-link">Developers</a>
+  <a href="#about" class="mob-link">About</a>
+  <a href="#values" class="mob-link">Our Values</a>
+  <a href="#contact" class="mob-link nav-cta">Contact Us</a>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" aria-label="Back to top">&uarr; Back to Top</button>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="particle p1"></div><div class="particle p2"></div><div class="particle p3"></div>
+  <div class="particle p4"></div><div class="particle p5"></div><div class="particle p6"></div>
+  <div class="particle p7"></div><div class="particle p8"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">Car Wash Land Sourcing &bull; GA &amp; Nationwide</div>
+    <h1>We Find the <span class="gold-word">Land.</span><br>You Build the <span class="gold-word">Car Wash.</span></h1>
+    <p class="hero-sub">We source, qualify, and connect prime commercial land to car wash developers — Georgia and nationwide.</p>
+    <div class="hero-buttons">
+      <a href="#sellers"     class="btn-hero btn-ho">I Have Land</a>
+      <a href="#agents"      class="btn-hero btn-ho">I&apos;m an Agent</a>
+      <a href="#jv-partners" class="btn-hero btn-ho">Let&apos;s JV</a>
+      <a href="#investors"   class="btn-hero btn-ho">I&apos;m a Developer</a>
+    </div>
+    <div style="margin-top:18px"><a href="https://calendly.com/admin-goldenvisionacquisitions/gva-discovery-call" target="_blank" rel="noopener" class="btn-hero btn-hp" style="display:inline-block">📅 Book a Free 15-Min Call</a></div>
+    <div class="hero-tagline">Source Smart &bull; Connect with Integrity &bull; Create Opportunity</div>
+  </div>
+</section>
+
+<!-- TRUST TICKER -->
+<div class="trust-ticker-wrap">
+  <div class="trust-ticker">
+    <div class="ticker-item"><div class="t-num">LLC</div><div class="t-label">Georgia<br>Registered</div></div>
+    <div class="ticker-dot"></div>
+    <div class="ticker-item"><div class="t-num">FREE</div><div class="t-label">Initial<br>Consultation</div></div>
+    <div class="ticker-dot"></div>
+    <div class="ticker-item"><div class="t-num">GA+</div><div class="t-label">Georgia &amp;<br>Nationwide</div></div>
+    <div class="ticker-dot"></div>
+    <div class="ticker-item"><div class="t-num">FAST</div><div class="t-label">We Respond<br>Promptly</div></div>
+    <div class="ticker-dot"></div>
+    <div class="ticker-item"><div class="t-num">NO</div><div class="t-label">Pressure or<br>Obligation</div></div>
+    <div class="ticker-dot"></div>
+    <div class="ticker-item"><div class="t-num">PRIVATE</div><div class="t-label">All Conversations<br>Confidential</div></div>
+    <div class="ticker-dot"></div>
+    <div class="ticker-item"><div class="t-num">65FT+</div><div class="t-label">Min Street<br>Frontage</div></div>
+    <div class="ticker-dot"></div>
+    <div class="ticker-item"><div class="t-num">12K+</div><div class="t-label">Daily Traffic<br>Required</div></div>
+    <div class="ticker-dot"></div>
+    <!-- duplicate for seamless loop -->
+    <div class="ticker-item"><div class="t-num">LLC</div><div class="t-label">Georgia<br>Registered</div></div>
+    <div class="ticker-dot"></div>
+    <div class="ticker-item"><div class="t-num">FREE</div><div class="t-label">Initial<br>Consultation</div></div>
+    <div class="ticker-dot"></div>
+    <div class="ticker-item"><div class="t-num">GA+</div><div class="t-label">Georgia &amp;<br>Nationwide</div></div>
+    <div class="ticker-dot"></div>
+    <div class="ticker-item"><div class="t-num">FAST</div><div class="t-label">We Respond<br>Promptly</div></div>
+    <div class="ticker-dot"></div>
+    <div class="ticker-item"><div class="t-num">NO</div><div class="t-label">Pressure or<br>Obligation</div></div>
+    <div class="ticker-dot"></div>
+    <div class="ticker-item"><div class="t-num">PRIVATE</div><div class="t-label">All Conversations<br>Confidential</div></div>
+    <div class="ticker-dot"></div>
+    <div class="ticker-item"><div class="t-num">65FT+</div><div class="t-label">Min Street<br>Frontage</div></div>
+    <div class="ticker-dot"></div>
+    <div class="ticker-item"><div class="t-num">12K+</div><div class="t-label">Daily Traffic<br>Required</div></div>
+    <div class="ticker-dot"></div>
+  </div>
+</div>
+
+<!-- WHO WE SERVE -->
+<section class="serve-section">
+  <div class="serve-header reveal">
+    <div class="section-label" style="justify-content:center">Who We Work With</div>
+    <h2 class="serve-h2">Four Paths. One Standard of Integrity.</h2>
+    <p class="serve-intro">Whether you own commercial land, represent land sellers, source land deals, or develop car washes — GVA has a clear, structured path for you.</p>
+  </div>
+
+  <!-- Tab Bar -->
+  <div class="s-tab-bar" role="tablist">
+
+    <button class="s-tab active" data-tab="sellers" role="tab">
+      <div class="s-tab-icon">
+        <!-- House — filled like GVA logo, bold and branded -->
+        <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <rect x="27" y="5" width="4" height="7" fill="currentColor" rx="0.5"/>
+          <polygon points="22,7 38,19 38,38 6,38 6,19" fill="currentColor" opacity="0.18" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+          <line x1="6" y1="19" x2="38" y2="19" stroke="currentColor" stroke-width="1.4" opacity="0.35"/>
+          <rect x="18" y="27" width="8" height="11" rx="0.5" stroke="currentColor" stroke-width="2.2" fill="none"/>
+          <rect x="9" y="22" width="6" height="5" rx="0.5" stroke="currentColor" stroke-width="2" fill="currentColor" opacity="0.15"/>
+          <rect x="29" y="22" width="6" height="5" rx="0.5" stroke="currentColor" stroke-width="2" fill="currentColor" opacity="0.15"/>
+        </svg>
+      </div>
+      <span class="s-tab-lbl">Land<br>Sellers</span>
+    </button>
+
+    <button class="s-tab" data-tab="agents" role="tab">
+      <div class="s-tab-icon">
+        <!-- Credential badge — filled card with photo and lines -->
+        <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <rect x="7" y="11" width="30" height="26" rx="3" fill="currentColor" opacity="0.12" stroke="currentColor" stroke-width="2.6"/>
+          <rect x="16" y="6" width="12" height="9" rx="2" fill="currentColor" opacity="0.12" stroke="currentColor" stroke-width="2.3"/>
+          <circle cx="19" cy="24" r="5.5" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="2.3"/>
+          <line x1="27" y1="21" x2="35" y2="21" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="27" y1="27" x2="33" y2="27" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="11" y1="32" x2="33" y2="32" stroke="currentColor" stroke-width="1.4" opacity="0.4"/>
+        </svg>
+      </div>
+      <span class="s-tab-lbl">Real Estate<br>Agents</span>
+    </button>
+
+    <button class="s-tab" data-tab="jv-partners" role="tab">
+      <div class="s-tab-icon">
+        <!-- Three solid connected nodes — partnership network -->
+        <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <line x1="16" y1="22" x2="28" y2="22" stroke="currentColor" stroke-width="2.5"/>
+          <line x1="15" y1="17" x2="19" y2="13" stroke="currentColor" stroke-width="2.5"/>
+          <line x1="29" y1="17" x2="25" y2="13" stroke="currentColor" stroke-width="2.5"/>
+          <circle cx="10" cy="22" r="7" fill="currentColor" opacity="0.18" stroke="currentColor" stroke-width="2.6"/>
+          <circle cx="34" cy="22" r="7" fill="currentColor" opacity="0.18" stroke="currentColor" stroke-width="2.6"/>
+          <circle cx="22" cy="9" r="6.5" fill="currentColor" opacity="0.18" stroke="currentColor" stroke-width="2.6"/>
+        </svg>
+      </div>
+      <span class="s-tab-lbl">JV<br>Partners</span>
+    </button>
+
+    <button class="s-tab" data-tab="investors" role="tab">
+      <div class="s-tab-icon">
+        <!-- Rising filled bars with upward trend dots -->
+        <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <line x1="4" y1="38" x2="40" y2="38" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+          <rect x="6" y="27" width="9" height="11" rx="1.5" fill="currentColor" opacity="0.18" stroke="currentColor" stroke-width="2.3"/>
+          <rect x="18" y="18" width="9" height="20" rx="1.5" fill="currentColor" opacity="0.18" stroke="currentColor" stroke-width="2.3"/>
+          <rect x="30" y="9" width="9" height="29" rx="1.5" fill="currentColor" opacity="0.18" stroke="currentColor" stroke-width="2.3"/>
+          <circle cx="10.5" cy="22" r="3.2" fill="currentColor"/>
+          <circle cx="22.5" cy="13" r="3.2" fill="currentColor"/>
+          <circle cx="34.5" cy="4" r="3.2" fill="currentColor"/>
+          <line x1="10.5" y1="22" x2="34.5" y2="4" stroke="currentColor" stroke-width="2.2"/>
+        </svg>
+      </div>
+      <span class="s-tab-lbl">Car Wash<br>Developers</span>
+    </button>
+
+  </div>
+
+  <!-- Tab Panels -->
+  <div class="s-panels-wrap">
+
+    <!-- SELLERS -->
+    <div id="sellers" class="s-panel active">
+      <div class="s-panel-left">
+        <div class="s-icon-xl">
+          <!-- Large filled house — mirrors GVA logo brand mark -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <rect x="49" y="10" width="7" height="13" fill="currentColor" rx="1" opacity="0.8"/>
+            <polygon points="40,14 68,35 68,68 12,68 12,35" fill="currentColor" opacity="0.18" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+            <line x1="12" y1="35" x2="68" y2="35" stroke="currentColor" stroke-width="2.5" opacity="0.3"/>
+            <rect x="32" y="48" width="16" height="20" rx="1" stroke="currentColor" stroke-width="3.5" fill="none"/>
+            <rect x="15" y="40" width="13" height="11" rx="1" stroke="currentColor" stroke-width="3" fill="currentColor" opacity="0.15"/>
+            <rect x="52" y="40" width="13" height="11" rx="1" stroke="currentColor" stroke-width="3" fill="currentColor" opacity="0.15"/>
+          </svg>
+        </div>
+        <div class="section-label">For Land Sellers</div>
+        <h3 class="s-panel-h">Connect Your Commercial Land to a Car Wash Developer</h3>
+        <p class="s-panel-desc">Own commercial land that could be the next car wash location? GVA evaluates your site against active developer buy boxes and connects you directly to an interested car wash developer — no listing required, no fees to you.</p>
+        <div class="s-callout">&ldquo;No listing required. No fees to sellers. GVA evaluates your land, makes the introduction, and handles everything through to the offer.&rdquo;</div>
+      </div>
+      <div class="s-panel-right">
+        <ul class="steps">
+          <li><div class="step-num">1</div><div><strong>Tell us about your land.</strong> Fill out the form or call us. Share the basics — location, acreage, zoning. No pressure, no obligation.</div></li>
+          <li><div class="step-num">2</div><div><strong>We evaluate your site.</strong> GVA screens your land against car wash developer buy boxes — traffic, frontage, demographics, zoning. You get a clear answer promptly.</div></li>
+          <li><div class="step-num">3</div><div><strong>We connect you to the developer.</strong> If your site qualifies, GVA introduces you directly to a car wash developer ready to issue an LOI and move forward.</div></li>
+        </ul>
+        <p class="note-text">GVA charges land sellers no fees. Our compensation is handled privately through our developer relationships — never through the seller.</p>
+        <a href="#contact" class="btn-panel">Submit My Land Site</a>
+      </div>
+    </div>
+
+    <!-- AGENTS -->
+    <div id="agents" class="s-panel">
+      <div class="s-panel-left">
+        <div class="s-icon-xl">
+          <!-- Agent credential badge — filled card with photo circle -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <rect x="10" y="18" width="60" height="50" rx="5" fill="currentColor" opacity="0.12" stroke="currentColor" stroke-width="4"/>
+            <rect x="28" y="9" width="24" height="17" rx="3.5" fill="currentColor" opacity="0.12" stroke="currentColor" stroke-width="3.8"/>
+            <circle cx="33" cy="41" r="11" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="3.8"/>
+            <path d="M20 62c2.5-7 7-10 13-10s10.5 3 13 10" stroke="currentColor" stroke-width="3.8" stroke-linecap="round"/>
+            <line x1="50" y1="35" x2="66" y2="35" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="50" y1="44" x2="63" y2="44" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="14" y1="57" x2="66" y2="57" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+          </svg>
+        </div>
+        <div class="section-label">For Real Estate Agents</div>
+        <h3 class="s-panel-h">Have a Commercial Land Listing? GVA Brings the Developer.</h3>
+        <p class="s-panel-desc">When your commercial land listing could fit car wash development criteria — the right size, location, frontage, and traffic — GVA evaluates it and works to introduce a qualified car wash developer. You represent your seller. We source the connection.</p>
+        <div class="s-callout">&ldquo;We work alongside you — not around you. Your listing relationship is always protected. We bring the developer; you keep your client.&rdquo;</div>
+      </div>
+      <div class="s-panel-right">
+        <ul class="steps">
+          <li><div class="step-num">1</div><div><strong>Reach out confidentially.</strong> Tell us about your listing. We sign an NDA before any property details are shared.</div></li>
+          <li><div class="step-num">2</div><div><strong>We evaluate quickly.</strong> GVA screens the site against car wash developer buy boxes — traffic, frontage, demographics, zoning. We come back to you fast.</div></li>
+          <li><div class="step-num">3</div><div><strong>Your seller meets the developer.</strong> GVA introduces a car wash developer directly to your seller. You keep your listing relationship throughout.</div></li>
+        </ul>
+        <p class="note-text">GVA does not represent sellers or buyers in a licensed capacity. We are the intermediary that makes the introduction. We work alongside licensed agents — never around them.</p>
+        <a href="#contact" class="btn-panel">Discuss a Land Listing</a>
+      </div>
+    </div>
+
+    <!-- JV PARTNERS -->
+    <div id="jv-partners" class="s-panel">
+      <div class="s-panel-left">
+        <div class="s-icon-xl">
+          <!-- Three solid filled nodes — deal network / partnership -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <line x1="29" y1="40" x2="51" y2="40" stroke="currentColor" stroke-width="3.5"/>
+            <line x1="27" y1="32" x2="33" y2="24" stroke="currentColor" stroke-width="3.5"/>
+            <line x1="53" y1="32" x2="47" y2="24" stroke="currentColor" stroke-width="3.5"/>
+            <circle cx="18" cy="40" r="13" fill="currentColor" opacity="0.18" stroke="currentColor" stroke-width="4"/>
+            <circle cx="62" cy="40" r="13" fill="currentColor" opacity="0.18" stroke="currentColor" stroke-width="4"/>
+            <circle cx="40" cy="16" r="11" fill="currentColor" opacity="0.18" stroke="currentColor" stroke-width="4"/>
+            <circle cx="18" cy="40" r="5" fill="currentColor" opacity="0.5" stroke="none"/>
+            <circle cx="62" cy="40" r="5" fill="currentColor" opacity="0.5" stroke="none"/>
+            <circle cx="40" cy="16" r="5" fill="currentColor" opacity="0.5" stroke="none"/>
+          </svg>
+        </div>
+        <div class="section-label">For Wholesalers, Bird Dogs &amp; Scouts</div>
+        <h3 class="s-panel-h">Found a Land Site? Let&apos;s Connect It to a Car Wash Developer.</h3>
+        <p class="s-panel-desc">If you source commercial land — whether you have it under contract, know the owner, or spotted a prime site — GVA qualifies it and works to match it to an active car wash developer. We bring the connection. You bring the lead.</p>
+        <div class="s-callout">&ldquo;Every JV starts with a written agreement. Your lead is protected from the moment you submit it — before you share a single detail about the site or the owner.&rdquo;</div>
+      </div>
+      <div class="s-panel-right">
+        <ul class="steps">
+          <li><div class="step-num">1</div><div><strong>Share the opportunity.</strong> We sign a JV agreement and NDA before you share any property or seller details. Your lead stays protected.</div></li>
+          <li><div class="step-num">2</div><div><strong>We qualify and match.</strong> GVA screens the site against developer buy boxes and works to match it to an active car wash developer. We keep you updated throughout.</div></li>
+          <li><div class="step-num">3</div><div><strong>Your compensation is confirmed in writing.</strong> All JV terms are formalized in a signed agreement before any deal details are shared — what you earn and the payment timeline are clearly documented.</div></li>
+        </ul>
+        <p class="note-text">We work with bird dogs, wholesalers, and scouts at all experience levels. Every JV is formalized with a written agreement before any deal details are shared.</p>
+        <a href="#contact" class="btn-panel">Submit a Land Deal</a>
+      </div>
+    </div>
+
+    <!-- INVESTORS -->
+    <div id="investors" class="s-panel">
+      <div class="s-panel-left">
+        <div class="s-icon-xl">
+          <!-- Rising filled bars with solid upward trend line -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <line x1="8" y1="68" x2="72" y2="68" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+            <rect x="10" y="48" width="16" height="20" rx="2.5" fill="currentColor" opacity="0.18" stroke="currentColor" stroke-width="3.8"/>
+            <rect x="33" y="32" width="16" height="36" rx="2.5" fill="currentColor" opacity="0.18" stroke="currentColor" stroke-width="3.8"/>
+            <rect x="56" y="14" width="16" height="54" rx="2.5" fill="currentColor" opacity="0.18" stroke="currentColor" stroke-width="3.8"/>
+            <circle cx="18" cy="40" r="5.5" fill="currentColor"/>
+            <circle cx="41" cy="22" r="5.5" fill="currentColor"/>
+            <circle cx="64" cy="6" r="5.5" fill="currentColor"/>
+            <line x1="18" y1="40" x2="64" y2="6" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="section-label">For Car Wash Developers</div>
+        <h3 class="s-panel-h">Pre-Qualified Car Wash Land Sites Across Georgia and Nationwide</h3>
+        <p class="s-panel-desc">GVA scouts, screens, and qualifies commercial land sites against car wash developer criteria before bringing them to you. Sites are evaluated for acreage, frontage, traffic, demographics, zoning, and competitive context — we focus on quality over quantity.</p>
+        <div class="s-callout">&ldquo;Every site we submit has been pre-screened against your buy box. You evaluate, negotiate, and close. We handle the sourcing.&rdquo;</div>
+      </div>
+      <div class="s-panel-right">
+        <ul class="steps">
+          <li><div class="step-num">1</div><div><strong>Share your buy box.</strong> Tell us exactly what you need — geography, acreage, traffic threshold, demographic profile. We build your criteria into our sourcing process.</div></li>
+          <li><div class="step-num">2</div><div><strong>We bring qualified sites to you.</strong> GVA submits only sites that match your criteria, each with supporting data on the key qualifying factors.</div></li>
+          <li><div class="step-num">3</div><div><strong>Close through licensed title.</strong> All transactions close through a licensed title company. Clean, legal, and fully transparent.</div></li>
+        </ul>
+        <p class="note-text">GVA works with single-site developers and multi-site operators. Share your buy box and we source to it. We only send you sites that fit.</p>
+        <a href="#contact" class="btn-panel">Share My Buy Box</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <div class="section-label">About Golden Vision Acquisitions</div>
+      <h2>A Car Wash Land Sourcing Company Built on Integrity</h2>
+      <p>Golden Vision Acquisitions L.L.C. is a Georgia-based commercial land sourcing company specializing exclusively in car wash development sites. We identify, qualify, and connect commercial land to active car wash developers across Georgia and the nation.</p>
+      <p>We are not a real estate broker. We do not represent buyers or sellers, negotiate contracts, or take listings. GVA's role is to find the land, screen it against developer buy box criteria, and make the introduction. The developer negotiates and closes. GVA handles its own compensation privately through developer relationships — never through the land seller.</p>
+      <p>We work with land sellers, commercial agents, bird dogs, and wholesalers. If you have a commercial land site that could be a fit for car wash development, GVA wants to hear about it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CORE VALUES -->
+<section id="values">
+  <div class="values-header reveal">
+    <h2>What We Stand For</h2>
+    <p class="tagline">Source Smart. Connect with Integrity. Create Opportunity.</p>
+  </div>
+  <div class="values-grid-2x2">
+    <div class="value-block reveal reveal-d1">
+      <div class="v-icon-wrap">
+        <!-- Gem / Diamond — represents precious value created -->
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 5L35 16L27 35H13L5 16Z" stroke-width="2"/>
+          <line x1="5" y1="16" x2="35" y2="16" stroke-width="1.4" opacity="0.45"/>
+          <line x1="13" y1="16" x2="20" y2="5" stroke-width="1.4" opacity="0.45"/>
+          <line x1="27" y1="16" x2="20" y2="5" stroke-width="1.4" opacity="0.45"/>
+          <line x1="13" y1="16" x2="20" y2="35" stroke-width="1.2" opacity="0.32"/>
+          <line x1="27" y1="16" x2="20" y2="35" stroke-width="1.2" opacity="0.32"/>
+        </svg>
+      </div>
+      <span class="we-are">We Are</span>
+      <h3>Value Creators</h3>
+      <p>We approach every interaction with the intention to contribute — not just to find a deal. We listen before we speak. We understand before we act. Creating real value is not a strategy. It is who we are.</p>
+      <span class="v-proof">We give you honest options even when they do not benefit us directly.</span>
+    </div>
+    <div class="value-block reveal reveal-d2">
+      <div class="v-icon-wrap">
+        <!-- Person centered inside a circle — people are the priority -->
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="16" stroke-width="2"/>
+          <circle cx="20" cy="14" r="5" stroke-width="2"/>
+          <path d="M11 34c0-6 4-11 9-11s9 5 9 11" stroke-width="2"/>
+        </svg>
+      </div>
+      <span class="we-are">We Are</span>
+      <h3>People First</h3>
+      <p>People before profits -- always. We make decisions based on what is truly best for the person in front of us. We protect dignity in difficult conversations. Behind every property is a person with a real situation, and that matters to us.</p>
+      <span class="v-proof">We tell you if our offer is not the best option for your situation.</span>
+    </div>
+    <div class="value-block reveal reveal-d3">
+      <div class="v-icon-wrap">
+        <!-- Open book — everything in writing, full transparency -->
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 9L6 13V33L20 29Z" stroke-width="2"/>
+          <path d="M20 9L34 13V33L20 29Z" stroke-width="2"/>
+          <line x1="20" y1="9" x2="20" y2="29" stroke-width="2"/>
+          <line x1="10" y1="17" x2="17" y2="16" stroke-width="1.4" opacity="0.5"/>
+          <line x1="10" y1="21" x2="17" y2="20" stroke-width="1.4" opacity="0.5"/>
+          <line x1="10" y1="25" x2="17" y2="24" stroke-width="1.4" opacity="0.5"/>
+          <line x1="23" y1="16" x2="30" y2="17" stroke-width="1.4" opacity="0.5"/>
+          <line x1="23" y1="20" x2="30" y2="21" stroke-width="1.4" opacity="0.5"/>
+          <line x1="23" y1="24" x2="30" y2="25" stroke-width="1.4" opacity="0.5"/>
+        </svg>
+      </div>
+      <span class="we-are">We Are</span>
+      <h3>Radically Honest</h3>
+      <p>No false promises. No hidden fees. No bait-and-switch. You will know the terms before you sign anything, and if something changes, you will hear it from us first. Radical honesty is not always comfortable -- but it is the only way to build lasting trust.</p>
+      <span class="v-proof">We put everything in writing and explain every line.</span>
+    </div>
+    <div class="value-block reveal reveal-d4">
+      <div class="v-icon-wrap">
+        <!-- Anchor — stability, reliability, trust you can count on -->
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="9" r="4" stroke-width="2"/>
+          <line x1="20" y1="13" x2="20" y2="35" stroke-width="2"/>
+          <line x1="10" y1="18" x2="30" y2="18" stroke-width="2"/>
+          <circle cx="10" cy="18" r="2" fill="currentColor" stroke="none" opacity="0.6"/>
+          <circle cx="30" cy="18" r="2" fill="currentColor" stroke="none" opacity="0.6"/>
+          <path d="M10 35c0-6 4-9 10-9s10 3 10 9" stroke-width="2"/>
+        </svg>
+      </div>
+      <span class="we-are">We Are</span>
+      <h3>Trusted Partners</h3>
+      <p>We walk alongside you -- not above you. Whether you are a first-time seller or a seasoned investor, you deserve a partner who shows up, communicates clearly, and delivers exactly what they promised. Trust is earned through consistency.</p>
+      <span class="v-proof">We follow up. We return calls. We do what we say.</span>
+    </div>
+  </div>
+  <div class="values-promise">
+    <p>These are not marketing words. They are the standards we hold ourselves to on every call, every offer, and every closing. If we ever fall short, we want to hear about it -- because integrity is a practice, not a claim.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-top reveal">
+    <div class="section-label">Get In Touch</div>
+    <h2>We Respond Promptly — No Pressure, No Obligation</h2>
+    <p>Choose how you want to connect. Call, email, book a call, or fill out the form below. We listen first -- no pressure, no obligation.</p>
+  </div>
+
+  <div class="contact-info-bar">
+    <div class="ci-item reveal reveal-d1">
+      <div class="ci-icon">&#128222;</div>
+      <div class="ci-text"><div class="ci-label">Call or Text</div><div class="ci-value"><a href="tel:+14049815935">(404) 981-5935</a></div></div>
+    </div>
+    <div class="ci-item reveal reveal-d2">
+      <div class="ci-icon">&#9993;</div>
+      <div class="ci-text"><div class="ci-label">Email</div><div class="ci-value"><a href="mailto:admin@goldenvisionacquisitions.com">admin@goldenvisionacquisitions.com</a></div></div>
+    </div>
+    <div class="ci-item reveal reveal-d3">
+      <div class="ci-icon">&#127963;</div>
+      <div class="ci-text"><div class="ci-label">Service Area</div><div class="ci-value">Georgia &amp; Nationwide</div></div>
+    </div>
+    <div class="ci-item reveal reveal-d4">
+      <div class="ci-icon">&#128336;</div>
+      <div class="ci-text"><div class="ci-label">Response Time</div><div class="ci-value">Prompt — We Prioritize Every Inquiry</div></div>
+    </div>
+    <div class="ci-item reveal reveal-d4">
+      <div class="ci-icon">&#128197;</div>
+      <div class="ci-text"><div class="ci-label">Book a Call</div><div class="ci-value"><a href="https://calendly.com/admin-goldenvisionacquisitions/gva-discovery-call" target="_blank" rel="noopener" style="color:var(--teal)">Schedule a 15-Min Discovery Call →</a></div></div>
+    </div>
+  </div>
+
+  <div class="social-row">
+    <!-- Social links coming soon -->
+  </div>
+
+  <div class="book-card reveal">
+    <div class="book-card-text">
+      <h3>Prefer to Book a Call Directly?</h3>
+      <p>No forms, no waiting. Book a free 15-min Discovery Call. If your situation is a fit, we will follow up with next steps from there.</p>
+    </div>
+    <a href="https://calendly.com/admin-goldenvisionacquisitions/gva-discovery-call" class="btn-book" target="_blank" rel="noopener">Book a Free Call &rarr;</a>
+  </div>
+
+  <div class="form-tabs-wrap reveal">
+    <div class="form-tabs">
+      <div class="form-tab active" data-tab="sellers">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 10.5L12 3L21 10.5" stroke-width="1.8"/>
+          <path d="M5 9V21H19V9" stroke-width="1.8"/>
+          <rect x="9" y="14" width="6" height="7" rx="0.5" stroke-width="1.7"/>
+          <rect x="5.5" y="11" width="4" height="3.5" rx="0.3" stroke-width="1.5"/>
+          <rect x="14.5" y="11" width="4" height="3.5" rx="0.3" stroke-width="1.5"/>
+        </svg>
+        I Have Land
+      </div>
+      <div class="form-tab" data-tab="partners">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="6" width="18" height="15" rx="2" stroke-width="1.8"/>
+          <rect x="9" y="3" width="6" height="5" rx="1.2" stroke-width="1.7"/>
+          <circle cx="10" cy="13" r="3" stroke-width="1.7"/>
+          <path d="M6 20c1-3 3-4.5 4-4.5s3 1.5 4 4.5" stroke-width="1.7"/>
+          <line x1="16" y1="11" x2="21" y2="11" stroke-width="1.7"/>
+          <line x1="16" y1="14" x2="20" y2="14" stroke-width="1.7"/>
+        </svg>
+        Agent / JV Partner
+      </div>
+      <div class="form-tab" data-tab="investors">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <line x1="2" y1="21" x2="22" y2="21" stroke-width="1.8"/>
+          <rect x="3" y="14" width="5" height="7" rx="1" stroke-width="1.7"/>
+          <rect x="10" y="9" width="5" height="12" rx="1" stroke-width="1.7"/>
+          <rect x="17" y="4" width="5" height="17" rx="1" stroke-width="1.7"/>
+          <circle cx="5.5" cy="11" r="1.8" fill="currentColor" stroke="none"/>
+          <circle cx="12.5" cy="6" r="1.8" fill="currentColor" stroke="none"/>
+          <circle cx="19.5" cy="1.5" r="1.8" fill="currentColor" stroke="none"/>
+          <line x1="5.5" y1="11" x2="19.5" y2="1.5" stroke-width="1.6"/>
+        </svg>
+        I&apos;m a Developer
+      </div>
+    </div>
+
+    <!-- SELLER FORM -->
+    <div class="form-pane active" id="tab-sellers">
+      <div class="form-card" id="seller-card">
+        <h3>Tell Us About Your Land Site</h3>
+        <p class="fc-sub">Free consultation. We listen first. No pressure, no obligation.</p>
+        <form id="sellerForm" action="https://formspree.io/f/xykqvdzn" method="POST">
+          <div class="form-grid">
+            <div><label for="s-name">Your Name *</label><input type="text" id="s-name" name="name" placeholder="Full name" required/></div>
+            <div><label for="s-phone">Phone Number *</label><input type="tel" id="s-phone" name="phone" placeholder="(555) 000-0000" required/></div>
+            <div><label for="s-email">Email Address</label><input type="email" id="s-email" name="email" placeholder="your@email.com"/></div>
+            <div><label for="s-address">Land Site Address *</label><input type="text" id="s-address" name="property_address" placeholder="Street, City, State, ZIP" required/></div>
+            <div><label for="s-situation">Your Situation</label>
+              <select id="s-situation" name="situation"><option value="">Select one...</option><option>Ready to sell my land</option><option>Testing the market</option><option>Inherited land / estate</option><option>Relocating / other plans</option><option>Behind on payments</option><option>Commercial rezoning opportunity</option><option>Other</option></select>
+            </div>
+            <div><label for="s-timeline">How soon do you need to sell?</label>
+              <select id="s-timeline" name="timeline"><option value="">Select...</option><option>As soon as possible (30 days or less)</option><option>1-3 months</option><option>3-6 months</option><option>Flexible / just exploring</option></select>
+            </div>
+            <div class="full-span"><label for="s-notes">Tell us more</label><textarea id="s-notes" name="notes" placeholder="Land location, acreage, zoning, current use, asking price (if any), any questions..."></textarea></div>
+          </div>
+          <input type="hidden" name="_subject" value="New Land Seller Inquiry -- GVA Website"/>
+          <button type="submit" class="btn-submit btn-submit-seller">Submit My Land Site</button>
+        </form>
+      </div>
+      <div class="success-panel" id="seller-success">
+        <div class="sp-icon">&#9989;</div>
+        <h3>Thank you! We received your message.</h3>
+        <p>We respond promptly to all land seller inquiries. Want to talk sooner?</p>
+        <div class="sp-actions">
+          <a href="https://calendly.com/admin-goldenvisionacquisitions/gva-discovery-call" class="sp-btn sp-btn-p" target="_blank">Book a Call Now &rarr;</a>
+          <a href="tel:+14049815935" class="sp-btn sp-btn-o">Call (404) 981-5935</a>
+        </div>
+        <div class="sp-contact">Or email <a href="mailto:admin@goldenvisionacquisitions.com">admin@goldenvisionacquisitions.com</a></div>
+        <!-- Social links coming soon -->
+      </div>
+    </div>
+
+    <!-- PARTNER FORM -->
+    <div class="form-pane" id="tab-partners">
+      <div class="form-card" id="partner-card">
+        <h3>Agent or JV Partnership Inquiry</h3>
+        <p class="fc-sub">All deal details are protected. We sign an NDA before any specifics are shared.</p>
+        <form id="partnerForm" action="https://formspree.io/f/xojobnjr" method="POST">
+          <div class="form-grid">
+            <div><label for="p-name">Your Name *</label><input type="text" id="p-name" name="name" placeholder="Full name" required/></div>
+            <div><label for="p-phone">Phone Number *</label><input type="tel" id="p-phone" name="phone" placeholder="(555) 000-0000" required/></div>
+            <div><label for="p-email">Email Address *</label><input type="email" id="p-email" name="email" placeholder="your@email.com" required/></div>
+            <div><label for="p-role">Your Role *</label>
+              <select id="p-role" name="role" required><option value="">Select one...</option><option>Licensed Real Estate Agent</option><option>Wholesaler</option><option>Bird Dog / Deal Scout</option><option>Real Estate Acquisitions Company</option><option>Other</option></select>
+            </div>
+            <div><label for="p-address">Property Address (if applicable)</label><input type="text" id="p-address" name="property_address" placeholder="Street, City, State, ZIP"/></div>
+            <div><label for="p-state">Property State</label><input type="text" id="p-state" name="property_state" placeholder="e.g. Georgia, Texas, Florida"/></div>
+            <div class="full-span"><label for="p-notes">Tell us about the deal or client situation</label><textarea id="p-notes" name="notes" placeholder="What is the situation? No sensitive details until NDA is signed."></textarea></div>
+          </div>
+          <input type="hidden" name="_subject" value="New Agent/JV Partner Inquiry -- GVA Website"/>
+          <button type="submit" class="btn-submit btn-submit-partner">Submit Partnership Inquiry</button>
+        </form>
+      </div>
+      <div class="success-panel" id="partner-success">
+        <div class="sp-icon">&#129309;</div>
+        <h3>Partnership inquiry received!</h3>
+        <p>We respond promptly and will reach out to schedule a call. We will send an NDA before discussing deal details.</p>
+        <div class="sp-actions">
+          <a href="https://calendly.com/admin-goldenvisionacquisitions/gva-discovery-call" class="sp-btn sp-btn-p" target="_blank">Book a Call Now &rarr;</a>
+          <a href="tel:+14049815935" class="sp-btn sp-btn-o">Call (404) 981-5935</a>
+        </div>
+        <div class="sp-contact">Or email <a href="mailto:admin@goldenvisionacquisitions.com">admin@goldenvisionacquisitions.com</a></div>
+        <!-- Social links coming soon -->
+      </div>
+    </div>
+
+    <!-- INVESTOR FORM -->
+    <div class="form-pane" id="tab-investors">
+      <div class="form-card" id="investor-card">
+        <h3>Car Wash Developer Buy Box Inquiry</h3>
+        <p class="fc-sub">Tell us your buy box criteria. We will reach out when we find a qualifying site.</p>
+        <form id="investorForm" action="https://formspree.io/f/mvzjybze" method="POST">
+          <div class="form-grid">
+            <div><label for="i-name">Your Name *</label><input type="text" id="i-name" name="name" placeholder="Full name" required/></div>
+            <div><label for="i-company">Company Name</label><input type="text" id="i-company" name="company" placeholder="Your LLC or company name"/></div>
+            <div><label for="i-phone">Phone Number *</label><input type="tel" id="i-phone" name="phone" placeholder="(555) 000-0000" required/></div>
+            <div><label for="i-email">Email Address *</label><input type="email" id="i-email" name="email" placeholder="your@email.com" required/></div>
+            <div><label for="i-markets">Target Markets / States</label><input type="text" id="i-markets" name="markets" placeholder="e.g. Georgia, Texas, Southeast, nationwide"/></div>
+            <div><label for="i-type">Development Focus</label>
+              <select id="i-type" name="property_types"><option value="">Select...</option><option>Car Wash (Express Tunnel)</option><option>Car Wash (Full Service)</option><option>Car Wash (Self Serve / IBA)</option><option>Multiple Car Wash Formats</option></select>
+            </div>
+            <div><label for="i-finance">Acquisition Approach</label>
+              <select id="i-finance" name="financing"><option value="">Select...</option><option>All Cash / Direct Purchase</option><option>SBA Financing</option><option>Construction Loan</option><option>Other / Varies</option></select>
+            </div>
+            <div><label for="i-max">Land Budget / Max Site Price</label><input type="text" id="i-max" name="max_price" placeholder="e.g. $800,000 or flexible"/></div>
+          </div>
+          <input type="hidden" name="_subject" value="New Car Wash Developer Inquiry -- GVA Website"/>
+          <button type="submit" class="btn-submit btn-submit-investor">Submit My Buy Box</button>
+        </form>
+      </div>
+      <div class="success-panel" id="investor-success">
+        <div class="sp-icon">&#128203;</div>
+        <h3>Buy box received!</h3>
+        <p>We will be in touch when we find a qualifying land site that matches your criteria. For faster response, book a call or reach out directly.</p>
+        <div class="sp-actions">
+          <a href="https://calendly.com/admin-goldenvisionacquisitions/gva-discovery-call" class="sp-btn sp-btn-p" target="_blank">Book a Call Now &rarr;</a>
+          <a href="tel:+14049815935" class="sp-btn sp-btn-o">Call (404) 981-5935</a>
+        </div>
+        <div class="sp-contact">Or email <a href="mailto:admin@goldenvisionacquisitions.com">admin@goldenvisionacquisitions.com</a></div>
+        <!-- Social links coming soon -->
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-top">
+        <img src="GVA_Logo.png" width="44" height="44" alt="Golden Vision Acquisitions Logo">
+        <div><div class="fb-name">Golden Vision Acquisitions L.L.C.</div><div class="fb-tag">Source Smart. Connect with Integrity. Create Opportunity.</div></div>
+      </div>
+      <p class="fb-desc">A Georgia L.L.C. specializing in commercial land sourcing for car wash developers. We identify, qualify, and connect commercial land sites to active car wash developers — Georgia and nationwide. Not a licensed real estate broker or agent.</p>
+      <div class="footer-social">
+        <!-- Social icons coming soon -->
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#sellers">For Land Sellers</a></li>
+        <li><a href="#agents">For Real Estate Agents</a></li>
+        <li><a href="#jv-partners">JV Partners</a></li>
+        <li><a href="#investors">Car Wash Developers</a></li>
+        <li><a href="#about">About GVA</a></li>
+        <li><a href="#values">Our Values</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <div class="contact-item"><span>Phone / Text</span><a href="tel:+14049815935">(404) 981-5935</a></div>
+      <div class="contact-item"><span>Email</span><a href="mailto:admin@goldenvisionacquisitions.com">admin@goldenvisionacquisitions.com</a></div>
+      <div class="contact-item"><span>Website</span><a href="https://goldenvisionacquisitions.com">goldenvisionacquisitions.com</a></div>
+      <div class="contact-item"><span>Service Area</span><a href="#contact">Georgia &amp; Nationwide</a></div>
+      <div class="contact-item"><span>Book a Call</span><a href="https://calendly.com/admin-goldenvisionacquisitions/gva-discovery-call" target="_blank" rel="noopener">Schedule a Discovery Call</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Golden Vision Acquisitions L.L.C. All rights reserved. Georgia L.L.C. Not a licensed real estate broker or agent. All transactions close through a licensed title company.</span>
+    <span><a href="#sellers">Submit Land Site</a> &nbsp;|&nbsp; <a href="#jv-partners">JV With Us</a> &nbsp;|&nbsp; <a href="#contact">Contact</a></span>
+  </div>
+</footer>
+
+<script>
+  // Nav glassmorphism on scroll
+  var nav=document.getElementById('mainNav');
+  window.addEventListener('scroll',function(){
+    nav.classList.toggle('scrolled',window.scrollY>60);
+  },{passive:true});
+
+  // Tab switching for Who We Serve section
+  var serveTabIds = ['sellers','agents','jv-partners','investors'];
+  function showServeTab(tabId) {
+    document.querySelectorAll('.s-tab').forEach(function(t){
+      t.classList.toggle('active', t.dataset.tab === tabId);
+    });
+    document.querySelectorAll('.s-panel').forEach(function(p){
+      p.classList.toggle('active', p.id === tabId);
+    });
+  }
+  document.querySelectorAll('.s-tab').forEach(function(tab){
+    tab.addEventListener('click', function(){ showServeTab(this.dataset.tab); });
+  });
+  // Activate tab from hash on page load
+  (function(){
+    var hash = window.location.hash.slice(1);
+    if(serveTabIds.indexOf(hash) > -1) showServeTab(hash);
+  })();
+
+  // Smooth scroll (tab-aware)
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var h=this.getAttribute('href');
+      if(h==='#')return;
+      var targetId = h.slice(1);
+      if(serveTabIds.indexOf(targetId) > -1) {
+        e.preventDefault();
+        showServeTab(targetId);
+        var section = document.querySelector('.serve-section');
+        if(section) section.scrollIntoView({behavior:'smooth',block:'start'});
+        history.replaceState(null,'',h);
+      } else {
+        e.preventDefault();
+        var t=document.querySelector(h);
+        if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+    });
+  });
+
+  // Scroll reveal (Intersection Observer)
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){observer.observe(el);});
+
+  // Form tabs
+  var tabs=document.querySelectorAll('.form-tab');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click',function(){
+      tabs.forEach(function(t){t.classList.remove('active');});
+      document.querySelectorAll('.form-pane').forEach(function(p){p.classList.remove('active');});
+      tab.classList.add('active');
+      document.getElementById('tab-'+tab.dataset.tab).classList.add('active');
+    });
+  });
+
+  // Form submissions
+  function handleForm(formId,cardId,successId){
+    var form=document.getElementById(formId);
+    if(!form)return;
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var btn=form.querySelector('.btn-submit');
+      var orig=btn.textContent;
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){
+          document.getElementById(cardId).style.display='none';
+          document.getElementById(successId).style.display='block';
+        } else {
+          btn.textContent=orig;btn.disabled=false;
+          alert('Something went wrong. Please call (404) 981-5935 or email admin@goldenvisionacquisitions.com');
+        }
+      })
+      .catch(function(){
+        btn.textContent=orig;btn.disabled=false;
+        alert('Network error. Please call (404) 981-5935 or email admin@goldenvisionacquisitions.com');
+      });
+    });
+  }
+  handleForm('sellerForm','seller-card','seller-success');
+  handleForm('partnerForm','partner-card','partner-success');
+  handleForm('investorForm','investor-card','investor-success');
+
+  // Mobile hamburger menu
+  var ham=document.getElementById('hamburger');
+  var mobMenu=document.getElementById('mobMenu');
+  if(ham&&mobMenu){
+    var closeMenu=function(){
+      ham.classList.remove('open');
+      mobMenu.classList.remove('open');
+      document.body.classList.remove('menu-open');
+    };
+    ham.addEventListener('click',function(){
+      ham.classList.toggle('open');
+      mobMenu.classList.toggle('open');
+      document.body.classList.toggle('menu-open',mobMenu.classList.contains('open'));
+    });
+    mobMenu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',closeMenu);
+    });
+    var mobClose=document.getElementById('mobClose');
+    if(mobClose){mobClose.addEventListener('click',closeMenu);}
+    mobMenu.addEventListener('click',function(e){
+      if(e.target===mobMenu){closeMenu();}
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){closeMenu();}
+    });
+  }
+  // Back to top button
+  var backTop=document.getElementById('backTop');
+  if(backTop){
+    window.addEventListener('scroll',function(){
+      backTop.classList.toggle('show',window.scrollY>600);
+    },{passive:true});
+    backTop.addEventListener('click',function(){
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  }
+</script>
+
+<!-- CHATBASE AI CHATBOT -->
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="sbR2Uz7d1_KB-Hcc3Z8Zj";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+</body>
+</html>
