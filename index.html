@@ -866,19 +866,28 @@
       <div class="form-card" id="partner-card">
         <h3>Agent or JV Partnership Inquiry</h3>
         <p class="fc-sub">All deal details are protected. We sign an NDA before any specifics are shared.</p>
-        <form id="partnerForm" action="https://formspree.io/f/xojobnjr" method="POST">
+        <form id="partnerForm" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" data-zoho="1">
           <div class="form-grid">
-            <div><label for="p-name">Your Name *</label><input type="text" id="p-name" name="name" placeholder="Full name" required/></div>
-            <div><label for="p-phone">Phone Number *</label><input type="tel" id="p-phone" name="phone" placeholder="(555) 000-0000" required/></div>
-            <div><label for="p-email">Email Address *</label><input type="email" id="p-email" name="email" placeholder="your@email.com" required/></div>
+            <div><label for="p-fname">First Name</label><input type="text" id="p-fname" name="First Name" maxlength="40" placeholder="First name"/></div>
+            <div><label for="p-lname">Last Name *</label><input type="text" id="p-lname" name="Last Name" maxlength="80" placeholder="Last name" required/></div>
+            <div><label for="p-phone">Phone Number *</label><input type="tel" id="p-phone" name="Phone" maxlength="30" placeholder="(555) 000-0000" required/></div>
+            <div><label for="p-email">Email Address *</label><input type="email" id="p-email" name="Email" maxlength="100" placeholder="your@email.com" required/></div>
             <div><label for="p-role">Your Role *</label>
-              <select id="p-role" name="role" required><option value="">Select one...</option><option>Licensed Real Estate Agent</option><option>Wholesaler</option><option>Bird Dog / Deal Scout</option><option>Real Estate Acquisitions Company</option><option>Other</option></select>
+              <select id="p-role" name="LEADCF1" required><option value="">Select one...</option><option value="Agent">Licensed Real Estate Agent</option><option value="Wholesaler">Wholesaler</option><option value="Bird Dog">Bird Dog / Deal Scout</option><option value="JV Partner">Real Estate Acquisitions Company</option><option value="JV Partner">Other</option></select>
             </div>
-            <div><label for="p-address">Property Address (if applicable)</label><input type="text" id="p-address" name="property_address" placeholder="Street, City, State, ZIP"/></div>
-            <div><label for="p-state">Property State</label><input type="text" id="p-state" name="property_state" placeholder="e.g. Georgia, Texas, Florida"/></div>
-            <div class="full-span"><label for="p-notes">Tell us about the deal or client situation</label><textarea id="p-notes" name="notes" placeholder="What is the situation? No sensitive details until NDA is signed."></textarea></div>
+            <div><label for="p-address">Property Address (if applicable)</label><input type="text" id="p-address" name="Address - Street Address" maxlength="255" placeholder="Street, City, State, ZIP"/></div>
+            <div><label for="p-state">Property State</label><input type="text" id="p-state" name="Address - State / Province" placeholder="e.g. Georgia, Texas, Florida"/></div>
+            <div class="full-span"><label for="p-notes">Tell us about the deal or client situation</label><textarea id="p-notes" name="Description" placeholder="What is the situation? No sensitive details until NDA is signed."></textarea></div>
           </div>
-          <input type="hidden" name="_subject" value="New Agent/JV Partner Inquiry -- GVA Website"/>
+          <input type="hidden" name="xnQsjsdp" value="d7f49a32161591e3cfb94f89246f8bdfdf7d2899836c90a36e68683492024395"/>
+          <input type="hidden" name="xmIwtLD" value="43c71a49c2e9ca4ac05e88e39e5bcf08f297eb7b6f19291cc568db263029122b9ac3135e6b37aaa468ef22842b111c1c"/>
+          <input type="hidden" name="actionType" value="TGVhZHM="/>
+          <input type="hidden" name="returnURL" value="https://goldenvisionacquisitions.com/?submitted=partner#contact"/>
+          <input type="hidden" name="zc_gad" value=""/>
+          <input type="hidden" name="Lead Source" value="Website Form"/>
+          <input type="hidden" name="Lead Status" value="New"/>
+          <input type="hidden" name="Address - Country / Region" value="United States"/>
+          <input type="text" name="aG9uZXlwb3Q" value="" style="display:none" tabindex="-1" autocomplete="off"/>
           <button type="submit" class="btn-submit btn-submit-partner">Submit Partnership Inquiry</button>
         </form>
       </div>
@@ -900,22 +909,32 @@
       <div class="form-card" id="investor-card">
         <h3>Car Wash Developer Buy Box Inquiry</h3>
         <p class="fc-sub">Tell us your buy box criteria. We will reach out when we find a qualifying site.</p>
-        <form id="investorForm" action="https://formspree.io/f/mvzjybze" method="POST">
+        <form id="investorForm" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" data-zoho="1">
           <div class="form-grid">
-            <div><label for="i-name">Your Name *</label><input type="text" id="i-name" name="name" placeholder="Full name" required/></div>
-            <div><label for="i-company">Company Name</label><input type="text" id="i-company" name="company" placeholder="Your LLC or company name"/></div>
-            <div><label for="i-phone">Phone Number *</label><input type="tel" id="i-phone" name="phone" placeholder="(555) 000-0000" required/></div>
-            <div><label for="i-email">Email Address *</label><input type="email" id="i-email" name="email" placeholder="your@email.com" required/></div>
-            <div><label for="i-markets">Target Markets / States</label><input type="text" id="i-markets" name="markets" placeholder="e.g. Georgia, Texas, Southeast, nationwide"/></div>
+            <div><label for="i-fname">First Name</label><input type="text" id="i-fname" name="First Name" maxlength="40" placeholder="First name"/></div>
+            <div><label for="i-lname">Last Name *</label><input type="text" id="i-lname" name="Last Name" maxlength="80" placeholder="Last name" required/></div>
+            <div><label for="i-company">Company Name</label><input type="text" id="i-company" placeholder="Your LLC or company name"/></div>
+            <div><label for="i-phone">Phone Number *</label><input type="tel" id="i-phone" name="Phone" maxlength="30" placeholder="(555) 000-0000" required/></div>
+            <div><label for="i-email">Email Address *</label><input type="email" id="i-email" name="Email" maxlength="100" placeholder="your@email.com" required/></div>
+            <div><label for="i-markets">Target Markets / States</label><input type="text" id="i-markets" placeholder="e.g. Georgia, Texas, Southeast, nationwide"/></div>
             <div><label for="i-type">Development Focus</label>
-              <select id="i-type" name="property_types"><option value="">Select...</option><option>Car Wash (Express Tunnel)</option><option>Car Wash (Full Service)</option><option>Car Wash (Self Serve / IBA)</option><option>Multiple Car Wash Formats</option></select>
+              <select id="i-type"><option value="">Select...</option><option>Car Wash (Express Tunnel)</option><option>Car Wash (Full Service)</option><option>Car Wash (Self Serve / IBA)</option><option>Multiple Car Wash Formats</option></select>
             </div>
             <div><label for="i-finance">Acquisition Approach</label>
-              <select id="i-finance" name="financing"><option value="">Select...</option><option>All Cash / Direct Purchase</option><option>SBA Financing</option><option>Construction Loan</option><option>Other / Varies</option></select>
+              <select id="i-finance"><option value="">Select...</option><option>All Cash / Direct Purchase</option><option>SBA Financing</option><option>Construction Loan</option><option>Other / Varies</option></select>
             </div>
-            <div><label for="i-max">Land Budget / Max Site Price</label><input type="text" id="i-max" name="max_price" placeholder="e.g. $800,000 or flexible"/></div>
+            <div><label for="i-max">Land Budget / Max Site Price</label><input type="text" id="i-max" placeholder="e.g. $800,000 or flexible"/></div>
           </div>
-          <input type="hidden" name="_subject" value="New Car Wash Developer Inquiry -- GVA Website"/>
+          <input type="hidden" name="xnQsjsdp" value="6d2554d23f2159d324ef055e294ecb5b65b39bc740c0d0d8557956f9f48aeda7"/>
+          <input type="hidden" name="xmIwtLD" value="128a0f46a96961475806e6a9e6b2810895aa633e188d44320a55387598dc0b2617511a2435bb6dd43d863c9f83b06f50"/>
+          <input type="hidden" name="actionType" value="TGVhZHM="/>
+          <input type="hidden" name="returnURL" value="https://goldenvisionacquisitions.com/?submitted=investor#contact"/>
+          <input type="hidden" name="zc_gad" value=""/>
+          <input type="hidden" name="LEADCF1" value="Developer"/>
+          <input type="hidden" name="Lead Source" value="Website Form"/>
+          <input type="hidden" name="Lead Status" value="New"/>
+          <input type="hidden" name="Description" id="i-desc-packed" value=""/>
+          <input type="text" name="aG9uZXlwb3Q" value="" style="display:none" tabindex="-1" autocomplete="off"/>
           <button type="submit" class="btn-submit btn-submit-investor">Submit My Buy Box</button>
         </form>
       </div>
@@ -1053,6 +1072,12 @@
       var orig=btn.textContent;
       btn.textContent='Sending...';btn.disabled=true;
       var isZoho=form.dataset.zoho==='1';
+      if(form.id==='investorForm'){
+        var parts=[];
+        var pk=function(label,sel){var el=document.getElementById(sel);if(el&&el.value){parts.push(label+': '+el.value);}};
+        pk('Company','i-company');pk('Target Markets / States','i-markets');pk('Development Focus','i-type');pk('Acquisition Approach','i-finance');pk('Land Budget / Max Site Price','i-max');
+        document.getElementById('i-desc-packed').value=parts.length?('BUY BOX DETAILS\n'+parts.join('\n')):'';
+      }
       var fetchOpts=isZoho
         ?{method:'POST',body:new URLSearchParams(new FormData(form)),mode:'no-cors'}
         :{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}};
