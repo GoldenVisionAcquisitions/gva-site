@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>GVA QR Codes</title>
+  <meta name="robots" content="noindex"/>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Segoe UI',Arial,sans-serif;background:#F5F7FA;padding:34px;display:flex;gap:40px;flex-wrap:wrap;justify-content:center}
+    .qr-block{background:#fff;border-radius:12px;padding:26px;text-align:center;box-shadow:0 4px 18px rgba(15,35,71,.1)}
+    .qr-block h2{font-size:1rem;color:#1B3A6B;margin-bottom:14px}
+    .qr-box{padding:14px;background:#fff;display:inline-block}
+    .dl{display:inline-block;margin-top:14px;background:#1B3A6B;color:#fff;text-decoration:none;font-weight:700;font-size:.85rem;padding:10px 22px;border-radius:6px}
+    p.hint{width:100%;text-align:center;color:#666;font-size:.85rem;margin-bottom:6px}
+  </style>
+</head>
+<body>
+  <p class="hint">GVA QR codes — scan with any phone camera. Use the buttons to download PNG files.</p>
+
+  <div class="qr-block">
+    <h2>Rosemarrie — /card</h2>
+    <div class="qr-box" id="qr1"></div><br>
+    <a class="dl" id="dl1" download="gva-qr-rosemarrie.png">&#8595; Download PNG</a>
+  </div>
+
+  <div class="qr-block">
+    <h2>Caleb — /card-caleb</h2>
+    <div class="qr-box" id="qr2"></div><br>
+    <a class="dl" id="dl2" download="gva-qr-caleb.png">&#8595; Download PNG</a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    function make(el, url, dl){
+      new QRCode(document.getElementById(el), {text:url, width:520, height:520, colorDark:"#0f2347", colorLight:"#ffffff", correctLevel:QRCode.CorrectLevel.H});
+      setTimeout(function(){
+        var c = document.querySelector('#'+el+' canvas');
+        if(c){ document.getElementById(dl).href = c.toDataURL('image/png'); }
+      }, 500);
+    }
+    make('qr1','https://goldenvisionacquisitions.com/card.html','dl1');
+    make('qr2','https://goldenvisionacquisitions.com/card-caleb.html','dl2');
+  </script>
+</body>
+</html>
