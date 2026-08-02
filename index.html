@@ -402,7 +402,7 @@
 
 
 <!-- PROOF -->
-<section class="serve-section" style="padding-top:34px;padding-bottom:10px">
+<section id="proof" class="serve-section" style="padding-top:34px;padding-bottom:10px">
   <div class="serve-header reveal">
     <div class="section-label" style="justify-content:center">Proof, Not Promises</div>
     <h2 class="serve-h2">Our System&apos;s First Full Hunt Found a Verified Site</h2>
@@ -1044,7 +1044,8 @@
       if(serveTabIds.indexOf(targetId) > -1) {
         e.preventDefault();
         showServeTab(targetId);
-        var section = document.querySelector('.serve-section');
+        var panel = document.getElementById(targetId);
+        var section = panel ? panel.closest('.serve-section') : document.querySelector('.s-tab-bar');
         if(section) section.scrollIntoView({behavior:'smooth',block:'start'});
         history.replaceState(null,'',h);
       } else {
